@@ -5,7 +5,7 @@
         <div id="wrapper">
             <div v-if="!logged" id="loginForm">
                 <label>Имя пользователя
-                    <input type="text" v-model="username" v-on:keydown.enter="auth">
+                    <input type="text" v-model="username" v-on:keydown.enter="auth" ref="nameInput">
                 </label>
                 <button @click="auth">Присоединиться</button>
             </div>
@@ -13,7 +13,7 @@
                 <div id="chat" ref="chat">
                     <message v-for="item in messages" :from="item.from" :msg="item.msg" :you="item.from === username"/>
                 </div>
-                <input v-model="msg" v-on:keydown.enter="send" autofocus>
+                <input v-model="msg" v-on:keydown.enter="send" autofocus maxlength="50">
                 <button @click="send">Отправить</button>
             </div>
         </div>
@@ -57,8 +57,9 @@
                 this.messages = msg;
                 setTimeout(() => {
                     this.$refs.chat.scrollTop = this.$refs.chat.scrollHeight;
-                }, 100)
+                }, 50)
             });
+            this.$refs.nameInput.focus();
         }
     }
 </script>
