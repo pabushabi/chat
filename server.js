@@ -1,4 +1,4 @@
-const port = 8080;
+const port = 8000;
 const express = require('express');
 
 const app = express();
@@ -33,5 +33,3 @@ io.on('connection', ws => {
         io.sockets.emit('smessage', messages)
     });
 });
-
-module.exports = app;
