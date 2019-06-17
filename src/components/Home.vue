@@ -37,7 +37,7 @@
                 messages: [
                     {from: "bot", msg: "Начните общение!"},
                 ],
-                socket: io('6361eb43.ngrok.io'),
+                socket: io('0ed66cd1.ngrok.io'),
             }
         },
         methods: {
