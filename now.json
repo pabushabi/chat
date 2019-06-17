@@ -3,10 +3,6 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/**/*",
-      "use": "@now/static"
-    },
-    {
       "src": "server.js",
       "use": "@now/node"
     }
