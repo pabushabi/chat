@@ -1,6 +1,6 @@
 # CHATWS is a chat based on WebSocket built using Vue.js and Node.js
 
-[Live demo](chat.pabushabi.now.sh)
+[Live demo](https://chat.pabushabi.now.sh)
 
 ## Project setup
 ```
