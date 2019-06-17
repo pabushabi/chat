@@ -1,4 +1,4 @@
-const port = 8000;
+const port = 8080;
 const express = require('express');
 
 const app = express();
@@ -8,8 +8,8 @@ const server = app.listen(port, () => {
 
 const io = require('socket.io')(server);
 
-const serveStatic = require('serve-static');
-app.use(serveStatic(__dirname + '/dist'));
+// const serveStatic = require('serve-static');
+// app.use(serveStatic(__dirname + '/dist'));
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
