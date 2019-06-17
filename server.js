@@ -33,3 +33,5 @@ io.on('connection', ws => {
         io.sockets.emit('smessage', messages)
     });
 });
+
+module.exports = app;
